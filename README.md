@@ -9,6 +9,8 @@ Things you may want to cover:
   2.5.1
 * Rails version
   5.2.4.1
+* Bundle version
+  2.1.4
 * System dependencies
 
 * Configuration
