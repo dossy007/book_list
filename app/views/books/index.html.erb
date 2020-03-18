@@ -1,0 +1,11 @@
+
+本の一覧
+
+<% @books.each do |book| %>
+  <div class="book">
+   title <%= book.title %>
+   date <%= book.date %>
+   author <%= book.author %>
+   summary <%= book.summary %>
+  </div>
+<% end %>
