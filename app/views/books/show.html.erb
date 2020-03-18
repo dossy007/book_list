@@ -1,4 +1,6 @@
 ほんの詳細
-<%=@book.title %>
-<%=@book.date %>
-<%=@book.summary %>
+<%= image_tag "#{@book.id}.jpg" ,alt: "タイトル" %>
+<%= @book.title %>
+<%= @book.date %>
+<%= @book.author %>
+<%= @book.summary %>
