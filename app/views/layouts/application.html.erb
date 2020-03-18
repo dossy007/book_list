@@ -10,6 +10,13 @@
   </head>
 
   <body>
+    <%if user_signed_in? %>
+      <a href="<%= destroy_user_session_path %>">ログアウト</a>
+      <a href="<%= user_path current_user%>">MYPAGE</a>
+    <% else %>
+      <a href="<%= user_session_path%>">ログイン</a>
+      <a href="<%= new_user_registration_path%>">新規登録</a>
+    <% end %>
     <%= yield %>
   </body>
 </html>
