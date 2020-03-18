@@ -1,0 +1,12 @@
+
+本の一覧
+
+<% @books.each do |book| %>
+  <div class="book">
+  <%= image_tag "#{book.id}.jpg" ,alt: "タイトル" %>
+   title <%= book.title %>
+   date <%= book.date %>
+   author <%= book.author %>
+   summary <%= book.summary %>
+  </div>
+<% end %>
