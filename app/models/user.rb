@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   enum status: [:men,:lady]
 
+  validates :name ,presence: true
+
   def birth #年月日に変換
    self.birth_day.strftime("%Y年 %m月 %d日")
   end
