@@ -1,2 +1,10 @@
 mypageです
 idは<%= current_user.id%>です
+nameは<%= current_user.name %>
+sexは
+<%if current_user.sex == 1 %>
+"男"
+<% else %>
+"女"
+<% end %>
+birth_dayは<%= current_user.birth %>
