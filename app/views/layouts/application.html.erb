@@ -11,8 +11,8 @@
 
   <body>
     <%if user_signed_in? %>
-      <a href="<%= destroy_user_session_path %>">ログアウト</a>
-      <a href="<%= user_path current_user%>">MYPAGE</a>
+    <%= link_to "ログアウト" ,destroy_user_session_path,method: :delete %>
+    <%= link_to "MYPAGE", user_path(current_user) %>
     <% else %>
       <a href="<%= user_session_path%>">ログイン</a>
       <a href="<%= new_user_registration_path%>">新規登録</a>
