@@ -13,6 +13,9 @@ Things you may want to cover:
   2.1.4
 * System dependencies
 
+book 投稿機能は現時点ではつけない
+mypageに過去に読んだ本を年ごとに一覧表示
+
 * Configuration
 
 * Database creation
