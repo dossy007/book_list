@@ -4,6 +4,20 @@ class BooksController < ApplicationController
 
   def show;@book = Book.find(params[:id]);end
 
+  def end_book
+    @end = EndBook.new(book_params)
+    @num = EndBook.where(user_id: current_user.id,book_id: book_params[:book_id])
+    if @num.length != 0 ##既にrecordが存在しているならrootへ
+      redirect_to :root
+    end
+
+    if @end.save
+
+    else
+      redirect_to :root
+    end
+  end
+
   private
 
   def book_params
