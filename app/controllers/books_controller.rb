@@ -18,7 +18,6 @@ class BooksController < ApplicationController
     end
   end
 
-  p
   private
 
   def book_params
