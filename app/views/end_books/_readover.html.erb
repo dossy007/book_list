@@ -1,0 +1,16 @@
+<%if user_signed_in? %>
+  <% if book.readover?(current_user)  %> <%##trueがover falseがunread%>
+    <%= form_for(book.end_books.find_by(user_id: current_user.id),method: :delete,id: "eerrr") do |f| %>
+      <%= f.submit "読了解除"%>
+    <% end %>
+    readover!!!!
+  <% else %>
+    <%= form_with model: book.end_books ,url: end_books_path,id: "ew" do |f|%>
+      <%= f.hidden_field :book_id,value: @book.id %>
+        <%= button_tag(class: "btn btn-default btn-xs") do %>
+        <% end %>
+    <%= f.submit "読了"%>
+    未読です
+    <% end %>
+  <% end %>
+<% end %>
