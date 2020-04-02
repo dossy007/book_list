@@ -4,6 +4,8 @@ class CreateEndBooks < ActiveRecord::Migration[5.2]
       t.references :user
       t.references :book
       t.timestamps
+
+      t.index [:user_id,:book_id],unique: true
     end
   end
 end
