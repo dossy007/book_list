@@ -6,10 +6,5 @@
 <%= @book.summary %>
 <br>
 ここにend_buttonをおく
-
-<%if user_signed_in? %>
-<%= form_with model: Book.new ,url: end_book_books_path do |f|%>
-<%= f.hidden_field :book_id,value: @book.id %>
-<%= f.submit "読了",id: "end_book"%>
-<% end %>
-<% end %>
+いわゆるいいね機能
+<%= render "end_books/readover",book: @book%>
