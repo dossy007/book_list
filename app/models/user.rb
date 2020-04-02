@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   enum status: [:men,:lady]
+  has_many :end_books, dependent: :destroy
+  has_many :books, through: :end_books
+
 
   validates :name ,presence: true
 
