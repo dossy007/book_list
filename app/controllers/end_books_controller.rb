@@ -5,10 +5,7 @@ class EndBooksController < ApplicationController
     @readover = Book.find(get_book)
     unless @readover.readover?(current_user)
       @readover.readover(current_user)
-      @readover.reload
-      # e.end_books.create(user_id: current_user.id)と同じ意味
         respond_to do |f|
-          f.html {redirect_to request.referrer || root_url}
           f.js
         end
       end
@@ -16,9 +13,10 @@ class EndBooksController < ApplicationController
 
   def destroy
     e = EndBook.find(params[:id])
+    r = EndBook.find(params[:id]).book_id
+    @readover = Book.find(r)
     e.destroy
     respond_to do |f|
-      f.html {redirect_to request.referrer || root_url}
       f.js
     end
   end
@@ -29,3 +27,6 @@ private
 def get_book
   params.require(:end_book)[:book_id]
 end
+
+####
+# js.erbの使い方を学びviewを実装
