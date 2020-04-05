@@ -11,15 +11,6 @@ class EndBooksController < ApplicationController
       end
   end
 
-  def destroy
-    e = EndBook.find(params[:id])
-    r = EndBook.find(params[:id]).book_id
-    @readover = Book.find(r)
-    e.destroy
-    respond_to do |f|
-      f.js
-    end
-  end
 end
 
 private
