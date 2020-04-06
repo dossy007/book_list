@@ -12,4 +12,5 @@ class Book < ApplicationRecord
   def readover?(user)
     self.users.include?(user)
   end
+
 end
