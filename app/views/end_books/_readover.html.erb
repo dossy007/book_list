@@ -1,0 +1,11 @@
+<%if user_signed_in? %>
+  <% if book.readover?(current_user)  %> <%##trueがover falseがunread%>
+      <%= link_to "☑️","#"%>
+  <% else %>
+    <%= form_with model: book.end_books ,url: end_books_path do |f|%>
+      <%= f.hidden_field :book_id,value: book.id %>
+      <%= f.text_field :comments,required: true,placeholder: "この本の感想を簡単に入力してください" %>
+      <%= f.submit "読了する"%>
+    <% end %>
+  <% end %>
+<% end %>
