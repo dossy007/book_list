@@ -13,3 +13,5 @@ class Book < ApplicationRecord
     self.users.include?(user)
   end
 end
+
+test
