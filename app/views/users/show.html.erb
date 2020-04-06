@@ -1,19 +1,10 @@
 mypageです
 idは<%= current_user.id%>です
 nameは<%= current_user.name %>
-birth_dayは<%= current_user.birth %>
-読了は、
-<% @user.end_books.each do |d| %>
-  <% b = Book.find(d.book_id) %>
-  <%= b.title %>
-  <%= b.author %>
-  <%= link_to book_path b.id  do %>
-  <%= image_tag "#{b.id}.jpg" ,alt: "タイトル" %>
-  <% end %>
-
-  読了時期
-  <%= d.created_at %>
-
-  読了した感想
-  <%= d.comments %>
+sexは
+<%if current_user.sex == 1 %>
+"男"
+<% else %>
+"女"
 <% end %>
+birth_dayは<%= current_user.birth %>
