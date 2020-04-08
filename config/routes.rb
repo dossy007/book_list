@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     collection do
       get "search"
     end
-    resources :books,only: [:show]
+    resources :user_books,only: [:show]
   end
 end
