@@ -6,10 +6,5 @@ Rails.application.routes.draw do
   resources :books, only: [:index,:show] do
   end
   resources :end_books, only: [:create]
-  resources :users, only: [:index,:show] do
-    collection do
-      get "search"
-    end
-    resources :user_books,only: [:show]
-  end
+  resources :users, only: [:show]
 end

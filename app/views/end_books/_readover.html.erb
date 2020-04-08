@@ -1,9 +1,6 @@
 <%if user_signed_in? %>
   <% if book.readover?(current_user)  %> <%##trueがover falseがunread%>
       <%= link_to "☑️","#"%>
-      <%# <% current_user.end_books.find_by(book_id: book.id).comments %>
-      <%# 書いた人の本の内容が見たいわけ## %>
-
   <% else %>
     <%= form_with model: book.end_books ,url: end_books_path do |f|%>
       <%= f.hidden_field :book_id,value: book.id %>
