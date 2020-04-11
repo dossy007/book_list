@@ -1,11 +1,34 @@
-ほんの詳細
-<%= image_tag "#{@book.id}.jpg" ,alt: "タイトル" %>
-<%= @book.title %>
-<%= @book.date %>
-<%= @book.author %>
-<%= @book.summary %>
-<br>
-ここにend_buttonをおく
-<div id="over">
-<%= render "end_books/readover",book: @book%>
+<div class="book-show">
+  <div class="left">
+    <div class="img-box">
+      <div class="img-wrapper">
+        <div class="img-canvas">
+          <%= image_tag "#{@book.id}.jpg" ,alt: "タイトル",class: "img-book" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <div class="book-title">
+      <h1 class="title">
+        <span>
+          <%= @book.title %>
+        </span>
+        <span>
+          <%= @book.date %>
+        </span>
+      </h1>
+    </div>
+    <div class="book-author">
+      <%= @book.author %>
+    </div>
+    <div class="book-summary">
+      <%= @book.summary %>
+    </div>
+  </div>
+  <br>
+  ここにend_buttonをおく
+  <div id="over">
+  <%= render "end_books/readover",book: @book%>
+  </div>
 </div>
