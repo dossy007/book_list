@@ -30,3 +30,45 @@ header{
   width:20%;
   color:white;
 }
+
+/*book/index.html*/
+/*main-layout*/
+.main-layout{
+  height:60%;
+  width:100%;
+  background-repeat: no-repeat;
+  background-image: image-url('back/paperrolls.jpg');
+  background-size: 100%;
+
+  .main-layout-contents{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    .book{
+      width:200px;
+      margin-bottom:20px;
+      background-color:white;
+      .book-image-content{
+        padding:20px 20px 20px 0px;
+        margin:0 auto;
+      }
+      
+      .book-image-box{
+        height:260px;
+        width:200px;
+        position:relative;
+        
+        .book-image{
+          height:100%;
+          width:150px;
+          position:absolute; //親はbook-image-box
+          margin:auto;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
