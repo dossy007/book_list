@@ -1,14 +1,15 @@
-
-本の一覧
-
-<% @books.each do |book| %>
-  <div class="book">
-  <a class="" href="<%= book_path book.id  %>">
-    <%= image_tag "#{book.id}.jpg" ,alt: "タイトル" %>
-  </a>
-   title <%= book.title %>
-   date <%= book.date %>
-   author <%= book.author %>
-   summary <%= book.summary %>
+<div class="main-layout">
+  <div class="main-layout-contents">
+    <% @books.each do |book| %>
+      <div class="book">
+        <div class="book-image-content">
+          <a href="<%= book_path book.id  %>">
+          <div class="book-image-box">
+            <%= image_tag "#{book.id}.jpg" ,alt: "タイトル",class: "book-image" %>
+          </div>
+          </a>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
