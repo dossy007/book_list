@@ -1,3 +1,32 @@
-// Place all the styles related to the books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*application.html*/
+
+header{
+  display: flex;
+  background-color: #232f3e;
+}
+
+#booklist{
+  width:20%;
+  font-size: 3em;
+}
+.booklist{
+  color: green;
+}
+
+/*search-form*/
+#navbox-container{
+  width:30%;
+  height:60px;
+  #navform{
+    display: flex;
+  }
+   
+}
+
+.mypage{
+  padding-top:1rem;
+}
+#tomypage{
+  width:20%;
+  color:white;
+}
