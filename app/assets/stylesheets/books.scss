@@ -72,3 +72,34 @@ header{
     }
   }
 }
+
+
+/*book/show.html*/
+.book-show{
+  margin-top:30px;
+}
+/*left*/
+.left{
+  float:left;
+  margin-left:15px;
+  height:350px;
+
+  .img-box{
+
+    .img-wrapper{
+      position:relative;
+      height:350px;
+      .img-canvas{
+        top:0;
+        left:0;
+        height:100%;
+        position:absolute;
+        .img-book{
+          height:350px;
+        }
+      }
+    }
+  }
+}
+
+}
