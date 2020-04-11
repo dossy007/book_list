@@ -10,6 +10,39 @@
   </head>
 
   <body>
+  <header>
+    <div id="booklist">
+      <%= link_to "BookList",root_path,class: "booklist" %>
+    </div>
+    <div id="navbox-container">
+      <%= form_with id: "navform" do |f|%>
+        <div class="nav-fill">
+          <%= f.text_field :name %>
+        </div>
+        <div class="nav-right">
+          <div class="nav-search-submit nav-sprite">
+          <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite">
+          </span>
+            <%= f.submit type: "submit",class:"nav-input" ,value:"検索" ,tabindex:"10" %>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    <div id="navbox-container">
+      <%= form_with id: "navform" do |f|%>
+        <div class="nav-fill">
+          <%= f.text_field :name %>
+        </div>
+        <div class="nav-right">
+          <div class="nav-search-submit nav-sprite">
+          <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite">
+          </span>
+          <%= f.submit type: "submit",class:"nav-input" ,value:"検索" ,tabindex:"10" %>
+          </div>
+        </div>
+    <% end %>
+    </div>
+
     <%if user_signed_in? %>
     <%= link_to "ログアウト" ,destroy_user_session_path,method: :delete %>
     <%= link_to "MYPAGE", user_path(current_user) %>
