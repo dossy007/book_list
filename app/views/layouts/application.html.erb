@@ -4,20 +4,53 @@
     <title>BookList</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <header>
+    <div id="booklist">
+      <%= link_to "BookList",root_path,class: "booklist" %>
+    </div>
+    <div id="navbox-container">
+      <%= form_with id: "navform" do |f|%>
+        <div class="nav-fill">
+          <%= f.text_field :name %>
+        </div>
+        <div class="nav-right">
+          <div class="nav-search-submit nav-sprite">
+          <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite">
+          </span>
+            <%= f.submit type: "submit",class:"nav-input" ,value:"検索" ,tabindex:"10" %>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    <div id="navbox-container">
+      <%= form_with id: "navform" do |f|%>
+        <div class="nav-fill">
+          <%= f.text_field :name %>
+        </div>
+        <div class="nav-right">
+          <div class="nav-search-submit nav-sprite">
+          <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite">
+          </span>
+          <%= f.submit type: "submit",class:"nav-input" ,value:"検索" ,tabindex:"10" %>
+          </div>
+        </div>
+    <% end %>
+    </div>
+
     <%if user_signed_in? %>
-    <%= link_to "ログアウト" ,destroy_user_session_path,method: :delete %>
-    <%= link_to "MYPAGE", user_path(current_user) %>
+    <div class="mypage">
+      <%= link_to "#{current_user.name}さんのMYPAGE", user_path(current_user),id: "tomypage" %>
+    </div>
     <% else %>
       <a href="<%= user_session_path%>">ログイン</a>
-      <a href="<%= new_user_registration_path%>">新規登録</a>
     <% end %>
-    <%= link_to "ROOT",root_path %>
+  </header>
     <%= yield %>
   </body>
 </html>

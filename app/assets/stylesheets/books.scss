@@ -1,3 +1,133 @@
-// Place all the styles related to the books controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*application.html*/
+
+header{
+  display: flex;
+  background-color: #232f3e;
+}
+
+#booklist{
+  width:20%;
+  font-size: 3em;
+}
+.booklist{
+  color: green;
+}
+
+/*search-form*/
+#navbox-container{
+  width:30%;
+  height:60px;
+  #navform{
+    display: flex;
+  }
+   
+}
+
+.mypage{
+  padding-top:1rem;
+}
+#tomypage{
+  width:20%;
+  color:white;
+}
+
+/*book/index.html*/
+/*main-layout*/
+.main-layout{
+  height:60%;
+  width:100%;
+  background-repeat: no-repeat;
+  background-image: image-url('back/paperrolls.jpg');
+  background-size: 100%;
+
+  .main-layout-contents{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    .book{
+      width:200px;
+      margin-bottom:20px;
+      background-color:white;
+      .book-image-content{
+        padding:20px 20px 20px 0px;
+        margin:0 auto;
+      }
+      
+      .book-image-box{
+        height:260px;
+        width:200px;
+        position:relative;
+        
+        .book-image{
+          height:100%;
+          width:150px;
+          position:absolute; //親はbook-image-box
+          margin:auto;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+/*book/show.html*/
+.book-show{
+  margin-top:40px;
+}
+/*left*/
+.left{
+  float:left;
+  margin-left:15px;
+  height:350px;
+
+  .img-box{
+
+    .img-wrapper{
+      position:relative;
+      height:350px;
+      .img-canvas{
+        top:0;
+        left:0;
+        height:100%;
+        position:absolute;
+        .img-book{
+          height:350px;
+        }
+      }
+    }
+  }
+}
+
+/*center*/
+.center{
+  margin-left:330px;
+  width:60%;
+  .book-title{
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .book-author{
+    font-size: 13px;
+    margin-top:15px;
+    line-height:20px;
+    padding-bottom:10px;
+  }
+  .book-summary{
+    margin-top: 30px;
+  }
+  .book-digest{
+    font-size:22px;
+  }
+  .book-summary{
+    font-size: 15px;;
+  }
+}
+
+  #over{
+    margin-left:330px;
+  }

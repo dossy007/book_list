@@ -1,3 +1,51 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*users/show.html*/
+.name{
+  height:80px;
+  position:relative;
+  .name-content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 15%;
+    height: 2rem;
+  }
+}
+
+.yourends{
+  width:1012px;
+  margin:0 auto;
+  .yourends-center{
+    width:90%;
+    border:solid 1px #C0C0C0;
+    .yourends-center-year{
+
+    }
+    .yourends-center-books{
+      margin-top:20px;
+      margin-bottom:20px;
+      .book-content{
+        margin-left:40px;
+        margin-top:20px;
+        display:flex;
+        width:80%;
+        .book-content-left{
+          .book-content-img{
+            width:150px;
+            .critical-img{
+              max-width: 100%;
+            }
+          }
+        }
+        .book-content-right{
+          padding-left:2.5%;
+          .book-content-row{
+            margin-bottom:10px;
+          }
+        }
+      }
+    }
+  }
+}
