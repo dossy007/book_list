@@ -25,18 +25,24 @@
             </div>
           <% end %>
         <% else %>
-            他人閲覧用のmypage
-            読了は、
-            <% @user.end_books.each do |d| %>
-              <% b = Book.find(d.book_id) %>
-              <%= b.title %>
-              <%= b.author %>
-              <%= link_to user_user_book_path b.id  do %>
-                <%= image_tag "#{b.id}.jpg" ,alt: "タイトル" %>
-              <% end %>
-              読了時期
-              <%= d.created_at %>
-            <% end %>
+          <% @user.end_books.each do |d| %>
+          <% b = Book.find(d.book_id) %>
+            <div class="book-content">
+              <div class="book-content-left">
+                <% b = Book.find(d.book_id) %>
+                <div class="book-content-img">
+                  <%= link_to user_user_book_path(params[:id],b.id)  do %>
+                    <%= image_tag "#{b.id}.jpg" ,alt: "タイトル",class: "critical-img" %>
+                  <% end %>
+                </div>
+              </div>
+              <div class="book-content-right">
+                <div class="book-content-row"><%= b.title %></div>   
+                <div class="book-content-row">(著): <%= b.author %></div>   
+                <div class="book-content-row">読了日時: <%= d.created_at %></div>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>
