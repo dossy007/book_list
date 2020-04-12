@@ -1,7 +1,36 @@
-他人の読んだほんの詳細
-<%= @book.book.title %>
-<%= @book.book.author %>
-<%= @book.comments %>
-<%= link_to book_path @book.book_id  do %>
-<%= image_tag "#{@book.book_id}.jpg" ,alt: "タイトル" %>
-<% end %>
+<div class="book-show">
+  <div class="left">
+    <div class="img-box">
+      <div class="img-wrapper">
+        <div class="img-canvas">
+          <%= image_tag "#{@book.id}.jpg" ,alt: "タイトル",class: "img-book" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <div class="book-title">
+      <h1 class="title">
+        <span>
+          <%= @book.book.title %>
+        </span>
+        <span>
+          <%= @book.book.date %>
+        </span>
+      </h1>
+    </div>
+    <div class="book-author">
+      <%= @book.book.author %>
+    </div>
+    <hr>
+    <div class="book-outline">
+      <div class="book-digest">
+        <%= @user.name %>さんの本の感想
+      </div>
+      <div class="book-summary">
+        <%= @book.comments %>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
