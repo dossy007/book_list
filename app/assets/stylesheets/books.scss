@@ -105,4 +105,25 @@ header{
 /*center*/
 .center{
   margin-left:330px;
+  width:60%;
+  .book-title{
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .book-author{
+    font-size: 13px;
+    margin-top:15px;
+    line-height:20px;
+    padding-bottom:10px;
+  }
+  .book-summary{
+    margin-top: 30px;
+  }
+  .book-digest{
+    font-size:22px;
+  }
+  .book-summary{
+    font-size: 15px;;
+  }
 }
