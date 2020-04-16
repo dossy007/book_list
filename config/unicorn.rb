@@ -5,7 +5,7 @@ app_path = File.expand_path('../../',__FILE__)
 worker_processes 1
 
 #/var/www/appにてunicornを動かす
-working_derectory app_path
+working_directory app_path
 
 #pidの場所指定 rails sした時同様
 pid "#{app_path}/tmp/pids/unicorn.pid"
@@ -16,7 +16,7 @@ listen 3000
 stderr_path "#{app_path}/log/unicorn.stderr.log"
 
 #通常log
-stdout_path "#{app_path}/log/uniconrn.stdout.log"
+stdout_path "#{app_path}/log/unicorn.stdout.log"
 
 #timeoutの上限時間
 timeout 30
