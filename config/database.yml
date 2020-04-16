@@ -51,4 +51,5 @@ production:
   <<: *default
   database: book_list_production
   username: book_list
-  password: <%= ENV['BOOK_LIST_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASS'] %>
+  socket: /var/lib/mysql/mysql.sock
