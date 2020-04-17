@@ -11,7 +11,7 @@ working_directory app_path
 pid "#{app_path}/tmp/pids/unicorn.pid"
 
 #port
-listen 3000
+listen "#{app_path}/tmp/sockets/unicorn.sock"
 #unicorn.error.logの場所
 stderr_path "#{app_path}/log/unicorn.stderr.log"
 
