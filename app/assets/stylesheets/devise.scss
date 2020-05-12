@@ -1,0 +1,82 @@
+// signup
+.content_signup{
+  margin:0 auto;
+  width:70%;
+  font-size: 25px;
+}
+.center_signup{
+  margin:30px auto 0;
+  width:50%;
+  padding-left:50px;
+  background-color: gainsboro;
+}
+
+input[type="text"] {
+  width: 250px;
+  height:35px;
+}
+
+
+// sign_in
+.content_login{
+  margin:0 auto;
+  width:70%;
+  font-size: 25px;
+}
+.center_login{
+  margin:30px auto 0;
+  width:50%;
+  padding-left:50px;
+  background-color: gainsboro;
+}
+
+.field{
+  margin-top:20px;
+}
+select{
+  width:80px;
+  height:30px;
+}
+
+input[type="email"] {
+  width: 250px;
+  height: 30px;
+}
+input[type="password"] {
+  width: 250px;
+  height: 30px;
+}
+
+
+.actions{
+    height: 70px;
+    margin-top: 20px;
+    font-size: 17px;
+  #submit{
+    display       : inline-block;
+    border-radius : 20%;          /* 角丸       */
+    font-size     : 21pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 12px 12px;   /* 余白       */
+    background    : rgba(0, 0,0, 0.74);     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 8px 8px 2px #666666;  /* 影の設定 */
+    border        : 2px solid rgba(0, 0, 0, 0.74);    /* 枠の指定 */
+  }
+  #submit:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    color         : rgba(0, 0, 127, 0.74);     /* 背景色     */
+    background    : #ffffff;     /* 文字色     */
+  }
+}
+
+
+.linkbox{
+  margin-top:20px;
+}
+.devise_links{
+  text-decoration:none
+}
