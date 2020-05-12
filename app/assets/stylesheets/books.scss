@@ -37,9 +37,19 @@ header{
   margin-left: 5px;
   font-size:17px;
 }
-#tomypage{
+.btn_login{
+  color: #fff;
+  text-decoration:none;
+}
+.btn_logout{
+  color: #fff;
+  text-decoration:none;
+}
+.btn_mypage{
   width:20%;
   color:white;
+  color: #fff;
+  text-decoration:none;
 }
 
 /*book/index.html*/
@@ -89,6 +99,8 @@ header{
 .book-show{
   margin-top:40px;
 }
+
+
 /*left*/
 .left{
   float:left;
