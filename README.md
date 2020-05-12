@@ -18,7 +18,7 @@ mypageに過去に読んだ本を年ごとに一覧表示
 
 * Configuration
 
-* Database creation
+
 
 * Database initialization
 
@@ -27,6 +27,8 @@ mypageに過去に読んだ本を年ごとに一覧表示
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+
+* Database creation
 
 * Database setting
 
