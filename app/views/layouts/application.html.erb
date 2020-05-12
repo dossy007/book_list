@@ -17,13 +17,13 @@
     <div id="navbox-container">
       <%= form_with id: "navform" do |f|%>
         <div class="nav-fill">
-          <%= f.text_field :name %>
+          <%# <%= f.text_field :name %> %>
         </div>
         <div class="nav-right">
           <div class="nav-search-submit nav-sprite">
           <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite">
           </span>
-            <%= f.submit type: "submit",class:"nav-input" ,value:"検索" ,tabindex:"10" %>
+            <%# <%= f.submit type: "submit",class:"nav-input" ,value:"検索" ,tabindex:"10" %> %>
           </div>
         </div>
       <% end %>
@@ -31,24 +31,29 @@
     <div id="navbox-container">
       <%= form_with id: "navform" do |f|%>
         <div class="nav-fill">
-          <%= f.text_field :name %>
+          <%# <%= f.text_field :name %> %>
         </div>
         <div class="nav-right">
           <div class="nav-search-submit nav-sprite">
           <span id="nav-search-submit-text" class="nav-search-submit-text nav-sprite">
           </span>
-          <%= f.submit type: "submit",class:"nav-input" ,value:"検索" ,tabindex:"10" %>
+          <%# <%= f.submit type: "submit",class:"nav-input" ,value:"検索" ,tabindex:"10" %> %>
           </div>
         </div>
     <% end %>
     </div>
 
     <%if user_signed_in? %>
-    <div class="mypage">
-      <%= link_to "#{current_user.name}さんのMYPAGE", user_path(current_user),id: "tomypage" %>
-    </div>
+    <button class="header_btn">
+      <%= link_to "#{current_user.name}さんのMYPAGE", user_path(current_user),class: "btn_mypage" %>
+    </button>
+    <button class="header_btn">
+      <%= link_to "ログアウト", destroy_user_session_path,method: :delete ,class: "btn_logout" %>
+    </button>
     <% else %>
-      <a href="<%= user_session_path%>">ログイン</a>
+    <button class="header_btn">
+      <%=  link_to "ログイン", user_session_path,class: "btn_login" %>
+    </button>
     <% end %>
   </header>
     <%= yield %>
