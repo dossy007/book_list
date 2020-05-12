@@ -1,50 +1,52 @@
 <div class="name">
   <div class="name-content"><%= @user.name %>さんのpage</div>
 </div>
-<div class="yourends">
-  <div class="yourends-center">
-    <div class="yourends-center-year">
-    </div>
-    <div class="yourends-center-books">
-        <%if current_user.id == params[:id].to_i %>
-          <% @user.end_books.each do |d| %>
-            <div class="book-content">
-              <div class="book-content-left">
-                <% b = Book.find(d.book_id) %>
-                <div class="book-content-img">
-                  <%= link_to book_path b.id  do %>
-                    <%= image_tag "#{b.id}.jpg" ,alt: "タイトル",class: "critical-img" %>
-                  <% end %>
+  <div class="yourends">
+  <% if @user.end_books.present? %>
+    <div class="yourends-center">
+      <div class="yourends-center-year">
+      </div>
+      <div class="yourends-center-books">
+          <%if current_user.id == params[:id].to_i %>
+            <% @user.end_books.each do |d| %>
+              <div class="book-content">
+                <div class="book-content-left">
+                  <% b = Book.find(d.book_id) %>
+                  <div class="book-content-img">
+                    <%= link_to book_path b.id  do %>
+                      <%= image_tag "#{b.id}.jpg" ,alt: "タイトル",class: "critical-img" %>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="book-content-right">
+                  <div class="book-content-row"><%= b.title %></div>   
+                  <div class="book-content-row">(著): <%= b.author %></div>   
+                  <div class="book-content-row">読了日時: <%= d.created_at %></div>
                 </div>
               </div>
-              <div class="book-content-right">
-                <div class="book-content-row"><%= b.title %></div>   
-                <div class="book-content-row">(著): <%= b.author %></div>   
-                <div class="book-content-row">読了日時: <%= d.created_at %></div>
-              </div>
-            </div>
-          <% end %>
-        <% else %>
-          <% @user.end_books.each do |d| %>
-          <% b = Book.find(d.book_id) %>
-            <div class="book-content">
-              <div class="book-content-left">
-                <% b = Book.find(d.book_id) %>
-                <div class="book-content-img">
-                  <%= link_to user_user_book_path(params[:id],b.id)  do %>
-                    <%= image_tag "#{b.id}.jpg" ,alt: "タイトル",class: "critical-img" %>
-                  <% end %>
+            <% end %>
+          <% else %>
+            <% @user.end_books.each do |d| %>
+            <% b = Book.find(d.book_id) %>
+              <div class="book-content">
+                <div class="book-content-left">
+                  <% b = Book.find(d.book_id) %>
+                  <div class="book-content-img">
+                    <%= link_to user_user_book_path(params[:id],b.id)  do %>
+                      <%= image_tag "#{b.id}.jpg" ,alt: "タイトル",class: "critical-img" %>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="book-content-right">
+                  <div class="book-content-row"><%= b.title %></div>   
+                  <div class="book-content-row">(著): <%= b.author %></div>   
+                  <div class="book-content-row">読了日時: <%= d.created_at %></div>
                 </div>
               </div>
-              <div class="book-content-right">
-                <div class="book-content-row"><%= b.title %></div>   
-                <div class="book-content-row">(著): <%= b.author %></div>   
-                <div class="book-content-row">読了日時: <%= d.created_at %></div>
-              </div>
-            </div>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
