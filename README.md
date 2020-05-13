@@ -19,12 +19,12 @@ mypageに過去に読んだ本を年ごとに一覧表示
 * Configuration
 
 * k6 test
+
 5minの一般的な負荷test結果
 ![app k6 io_runs_728398](https://user-images.githubusercontent.com/35597894/81823507-58168200-956f-11ea-905e-7f32bdc37fa0.png)
 
 最初に100vuの負荷をかけたtest結果 (vu == virtual users)
 ![app k6 io_runs_728632](https://user-images.githubusercontent.com/35597894/81825216-5352cd80-9571-11ea-98bb-7dea77114dfe.png)
-
 
 
 * Database initialization
@@ -34,14 +34,16 @@ mypageに過去に読んだ本を年ごとに一覧表示
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+
 使用した詳細はmain.tfに記述。一般的にこのような図で示すことができる。
+
 ![aws図](https://user-images.githubusercontent.com/35597894/81824822-db84a300-9570-11ea-917a-3c00ca4664b4.png)
 
 
-* Database creation
-
 * Database setting
+amazon rdsを使用
 
+* Database creation
 ## users table
 |Column|Type|Option|
 |------|----|------|
