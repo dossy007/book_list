@@ -23,6 +23,14 @@ resource "awscloud_elb" "elb" {
   security_group_id = "${lookup(var.elb, "security_group")}"
 }
 
+#target_group
+resource "awscloud_elb" "targetgroup" {
+  name = "${lookup(var.target, "name")}"
+  port = "${lookup(var.taeget, "port")}"
+  vpc_id = "${lookup(var.taeget, "vpc_id")}"
+  taeget = "${lookup(var.target, "target_group")}"
+}
+
 # VPC 作成
 resource "awscloud_vpc" "vpc" {
   name       = "${lookup(var.vpc, "name")}"
