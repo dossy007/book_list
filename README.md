@@ -22,7 +22,9 @@ mypageに過去に読んだ本を年ごとに一覧表示
 5minの一般的な負荷test結果
 ![app k6 io_runs_728398](https://user-images.githubusercontent.com/35597894/81823507-58168200-956f-11ea-905e-7f32bdc37fa0.png)
 
-最初に負荷をかけたtest
+最初に200vuの負荷をかけたtest結果 (vu == virtual users)
+![app k6 io_runs_728632 (1)](https://user-images.githubusercontent.com/35597894/81823987-e8ed5d80-956f-11ea-8295-0affb0b829f6.png)
+
 
 * Database initialization
 
