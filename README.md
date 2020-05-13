@@ -33,6 +33,9 @@ mypageに過去に読んだ本を年ごとに一覧表示
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+使用した詳細はmain.tfに記述。一般的にこのような図で示すことができる。
+![aws図](https://user-images.githubusercontent.com/35597894/81824822-db84a300-9570-11ea-917a-3c00ca4664b4.png)
+
 
 * Database creation
 
