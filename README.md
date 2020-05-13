@@ -19,8 +19,10 @@ mypageに過去に読んだ本を年ごとに一覧表示
 * Configuration
 
 * k6 test
+5minの一般的な負荷test結果
 ![app k6 io_runs_728398](https://user-images.githubusercontent.com/35597894/81823507-58168200-956f-11ea-905e-7f32bdc37fa0.png)
 
+最初に負荷をかけたtest
 
 * Database initialization
 
