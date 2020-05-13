@@ -19,7 +19,7 @@ mypageに過去に読んだ本を年ごとに一覧表示
 * Configuration
 
 * k6 test
-![Uploading app.k6.io_runs_728398.png…]()
+![app k6 io_runs_728398](https://user-images.githubusercontent.com/35597894/81823507-58168200-956f-11ea-905e-7f32bdc37fa0.png)
 
 
 * Database initialization
