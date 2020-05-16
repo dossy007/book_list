@@ -12,4 +12,18 @@
       </div>
     <% end %>
   </div>
+  
+  <div class="main-layout-contents">
+    <% @subbooks.each do |book| %>
+        <div class="book">
+          <div class="book-image-content">
+            <a href="<%= book_path book.id  %>">
+            <div class="book-image-box">
+              <%= image_tag "#{book.id}.jpg" ,alt: "タイトル",class: "book-image" %>
+            </div>
+            </a>
+          </div>
+        </div>
+      <% end %>
+  </div>
 </div>
