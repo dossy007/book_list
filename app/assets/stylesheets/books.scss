@@ -15,6 +15,31 @@ header{
   margin-left:10px;
 }
 
+.nav-footer{
+  background-color: #232F3E;
+}
+
+.center-footer{
+  width:80%;
+  margin:0 auto;
+  display: flex;
+}
+
+.center-accessibility{
+  margin: 0 auto;
+  padding-top:20px;
+  padding-bottom:40px;
+  color: white;
+}
+.accessibility-top{
+  margin-top:10px;
+  font-size: 20px;
+}
+.accessibility-box{
+  color:#DDD;
+  margin-top:20px;
+}
+
 /*search-form*/
 #navbox-container{
   width:27%;
