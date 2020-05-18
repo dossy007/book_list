@@ -7,14 +7,14 @@
       <div class="yourends-center-year">
       </div>
       <div class="yourends-center-books">
-          <%if current_user.id == params[:id].to_i %>
-            <% @user.end_books.each do |d| %>
+          <%if current_user.id == params[:id].to_i %> <%#自分のmypage%>
+            <% @user.end_books.each do |info_user_books| %>
               <div class="book-content">
                 <div class="book-content-left">
-                  <% b = Book.find(d.book_id) %>
+                  <% info_books = Book.find(info_user_books.book_id) %>
                   <div class="book-content-img">
-                    <%= link_to book_path b.id  do %>
-                      <%= image_tag "#{b.id}.jpg" ,alt: "タイトル",class: "critical-img" %>
+                    <%= link_to book_path info_books.id  do %>
+                      <%= image_tag "#{info_books.id}.jpg" ,alt: "タイトル",class: "critical-img" %>
                     <% end %>
                   </div>
                 </div>
@@ -26,21 +26,20 @@
               </div>
             <% end %>
           <% else %>
-            <% @user.end_books.each do |d| %>
-            <% b = Book.find(d.book_id) %>
+            <% @user.end_books.each do |info_user_books| %> <%#他人のmypage%>
+            <% info_books = Book.find(info_user_books.book_id) %>
               <div class="book-content">
                 <div class="book-content-left">
-                  <% b = Book.find(d.book_id) %>
                   <div class="book-content-img">
-                    <%= link_to user_user_book_path(params[:id],b.id)  do %>
-                      <%= image_tag "#{b.id}.jpg" ,alt: "タイトル",class: "critical-img" %>
+                    <%= link_to user_user_book_path(params[:id],info_books.id)  do %>
+                      <%= image_tag "#{info_books.id}.jpg" ,alt: "タイトル",class: "critical-img" %>
                     <% end %>
                   </div>
                 </div>
                 <div class="book-content-right">
-                  <div class="book-content-row"><%= b.title %></div>   
-                  <div class="book-content-row">(著): <%= b.author %></div>   
-                  <div class="book-content-row">読了日時: <%= d.created_at %></div>
+                  <div class="book-content-row"><%= info_books.title %></div>   
+                  <div class="book-content-row">(著): <%= info_books.author %></div>   
+                  <div class="book-content-row">読了日時: <%= info_user_books.created_at %></div>
                 </div>
               </div>
             <% end %>
