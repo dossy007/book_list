@@ -18,10 +18,14 @@
                     <% end %>
                   </div>
                 </div>
+                <div class="book-content-center">
+                  <div class="book-content-row"><%= info_books.title %></div>   
+                  <div class="book-content-row">(著): <%= info_books.author %></div>   
+                  <div class="book-content-row">読了日時: <%= info_user_books.created_at %></div>
+                </div>
                 <div class="book-content-right">
-                  <div class="book-content-row"><%= b.title %></div>   
-                  <div class="book-content-row">(著): <%= b.author %></div>   
-                  <div class="book-content-row">読了日時: <%= d.created_at %></div>
+                  <div class="book-content-row row-list">この本の感想</div>   
+                  <div class="book-content-review">　<%= info_user_books.comments %></div>
                 </div>
               </div>
             <% end %>
